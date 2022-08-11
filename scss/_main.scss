@@ -1,0 +1,96 @@
+.main {
+    color: white;
+    text-align: center;
+    list-style-position: inside;
+    font-family: 'Ubuntu', sans-serif;
+    .first-section {
+        h2 {
+            font-family: 'Rubik Burned', cursive;
+            color: #FFFFFF;
+            font-weight: bold;
+            margin: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        background-color: $color6;
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+
+        .div-drugs {
+            background-color: $color9;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .div-ages {
+            background-color: $color8;
+
+            h3 {
+                margin: 10px 0;
+            }
+
+            ol {
+                li {
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+
+    section {
+        background-color: $color7;
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+
+        h3 {
+            margin: 10px 0;
+            color: #FFFFFF;
+            font-weight: bold;
+            margin: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        div {
+            background-color: $color8;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                margin: 10px 0;
+            }
+
+            iframe {
+                width: 100%;
+                max-width: 500px;
+                margin: 10px 0;
+            }
+
+            ul {
+                li {
+                    margin: 10px 0;
+                }
+            }
+
+            ol {
+                li {
+                    margin: 10px 0;
+                }
+            }
+
+            p {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+footer{
+    background-color: rgba($color: $color1, $alpha: 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

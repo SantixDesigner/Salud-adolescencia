@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik+Burned&family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body{
+    background-color: black;
+}
+$color1:#845EC2;
+$color2:#009EFA;
+$color3:#00D2FC;
+$color4:#4FFBDF;
+$color5:rgb(164, 164, 164);
+//Colores para la pagina
+$color6:#1B211A;
+$color7:#1E2C1C;
+$color8:#27402D;
+$color9:#284D37;
+$color10:#156B5F;
+@import "header";
+@import "main";

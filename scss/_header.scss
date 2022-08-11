@@ -1,0 +1,91 @@
+.header{
+    background-color: rgba($color: $color1, $alpha: 0.5);
+    display: flex;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding: 5px 10px;
+    color: $color5;
+    h1{
+        background: -webkit-linear-gradient(45deg, $color1 0%,$color2 50%, $color3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    a{
+        img{
+            margin-left: 50px;
+            width: 50px;
+            border-radius: 49px;
+            opacity: 0.7;
+        }
+    }
+    .nav{
+        margin-top: 8px;
+        margin-left: auto;
+        .ul-nav{
+            display: flex;
+            li{
+                list-style: none;
+                a{
+                    text-decoration:none;
+                    margin:0 7.5px;
+                    background-image: radial-gradient(currentColor, currentColor);
+                    background-position: 50% 100%;
+                    background-size: 0% 0%, 2.5px;
+                    transition: .2s;
+                    color: $color5;
+                    font-size: 17px;
+                    &:hover{
+                        color:green;
+                        background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+    }
+    .bars{
+        display: none;
+    }
+}
+@media(max-width:768px) {
+    .header {
+        .bars {
+            display: block;
+            margin-left: auto;
+            cursor: pointer;
+            position: absolute;
+            top:10px;
+            right: 10px;
+        }
+
+        .nav {
+            position: fixed;
+            margin: 0;
+            top: 0px;
+            left: 0px;
+            background-color: rgba($color: $color2, $alpha: 0.95);
+            height: 100%;
+            transform: translateX(-300px);
+            transition: .4s ease-in-out;
+            .ul-nav {
+                flex-direction: column;
+                margin-top: 50px;
+
+                li {
+                    margin: 10px 0;
+                    a{
+                        color: black;
+                        &:hover{
+                            color: chocolate;
+                        }
+                    }
+                }
+            }
+        }
+        .nav-show{
+            transform: translateX(0vw);
+        }
+    }
+}

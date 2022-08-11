@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik+Burned&family=Ubuntu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+body {
+  background-color: black; }
+
+.header {
+  background-color: rgba(132, 94, 194, 0.5);
+  display: flex;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 5px 10px;
+  color: #a4a4a4; }
+  .header h1 {
+    background: -webkit-linear-gradient(45deg, #845EC2 0%, #009EFA 50%, #00D2FC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .header a img {
+    margin-left: 50px;
+    width: 50px;
+    border-radius: 49px;
+    opacity: 0.7; }
+  .header .nav {
+    margin-top: 8px;
+    margin-left: auto; }
+    .header .nav .ul-nav {
+      display: flex; }
+      .header .nav .ul-nav li {
+        list-style: none; }
+        .header .nav .ul-nav li a {
+          text-decoration: none;
+          margin: 0 7.5px;
+          background-image: radial-gradient(currentColor, currentColor);
+          background-position: 50% 100%;
+          background-size: 0% 0%, 2.5px;
+          transition: .2s;
+          color: #a4a4a4;
+          font-size: 17px; }
+          .header .nav .ul-nav li a:hover {
+            color: green;
+            background-size: 100% 1px; }
+  .header .bars {
+    display: none; }
+
+@media (max-width: 768px) {
+  .header .bars {
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; }
+  .header .nav {
+    position: fixed;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 158, 250, 0.95);
+    height: 100%;
+    transform: translateX(-300px);
+    transition: .4s ease-in-out; }
+    .header .nav .ul-nav {
+      flex-direction: column;
+      margin-top: 50px; }
+      .header .nav .ul-nav li {
+        margin: 10px 0; }
+        .header .nav .ul-nav li a {
+          color: black; }
+          .header .nav .ul-nav li a:hover {
+            color: chocolate; }
+  .header .nav-show {
+    transform: translateX(0vw); } }
+
+.main {
+  color: white;
+  text-align: center;
+  list-style-position: inside;
+  font-family: 'Ubuntu', sans-serif; }
+  .main .first-section {
+    background-color: #1B211A;
+    padding: 5px;
+    width: 90%;
+    margin: 0 auto; }
+    .main .first-section h2 {
+      font-family: 'Rubik Burned', cursive;
+      color: #FFFFFF;
+      font-weight: bold;
+      margin: 10px;
+      border-bottom: 1px solid white; }
+    .main .first-section .div-drugs {
+      background-color: #284D37;
+      width: 100%; }
+      .main .first-section .div-drugs img {
+        width: 100%; }
+    .main .first-section .div-ages {
+      background-color: #27402D; }
+      .main .first-section .div-ages h3 {
+        margin: 10px 0; }
+      .main .first-section .div-ages ol li {
+        margin: 20px 0; }
+  .main section {
+    background-color: #1E2C1C;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px; }
+    .main section h3 {
+      margin: 10px 0;
+      color: #FFFFFF;
+      font-weight: bold;
+      margin: 10px;
+      border-bottom: 1px solid white; }
+    .main section div {
+      background-color: #27402D; }
+      .main section div img {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px 0; }
+      .main section div iframe {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px 0; }
+      .main section div ul li {
+        margin: 10px 0; }
+      .main section div ol li {
+        margin: 10px 0; }
+      .main section div p {
+        margin: 10px 0; }
+
+footer {
+  background-color: rgba(132, 94, 194, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center; }
