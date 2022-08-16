@@ -49,6 +49,7 @@ const funcion = () => {
                 <p>Muy bien amigazo, te ganaste 10 pesitos (solo si fuiste el primero)</p>`;
         }
         divResultado.append(crearElement);
+        button.remove();
     })
 }
 const funcionPrin = () => {
