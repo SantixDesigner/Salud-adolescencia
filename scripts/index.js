@@ -50,12 +50,11 @@ const funcion = () => {
         }
         divResultado.append(crearElement);
         button.remove();
-        for (let i = 0; i<cuestionarios.length; i++){
+        for (let i = cuestionarios.length-1; i>-1; i--){
+            console.log(i);
             cuestionarios[i].remove();
             p[i].remove();
         }
-        cuestionarios[0].remove();
-        cuestionarios[1].remove();
     })
 }
 const funcionPrin = () => {
@@ -92,13 +91,10 @@ if (sessionStorage.getItem('puntuacion')){
     puntuacionTotal = sessionStorage.getItem('puntuacion');
     funcion();
     button.remove();
-    for (let i = 0; i<cuestionarios.length; i++){
+    for (let i = cuestionarios.length-1; i>-1; i--){
+        console.log(i);
         cuestionarios[i].remove();
         p[i].remove();
     }
-    setTimeout(() => {
-        cuestionarios[1].remove();
-        cuestionarios[0].remove();
-    },0)
 }
 funcionPrin();
