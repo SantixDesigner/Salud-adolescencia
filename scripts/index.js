@@ -1,5 +1,8 @@
 let nav = document.getElementById('nav-toggle');
-
+let i = 0;
+if (localStorage.getItem('login')) {
+    i = localStorage.getItem('login');
+}
 let nav1 = document.getElementsByClassName('nav');
 let p = document.getElementsByClassName('frases');
 nav.addEventListener('click', (e) => {
@@ -50,48 +53,57 @@ const funcion = () => {
         }
         divResultado.append(crearElement);
         button.remove();
-        for (let i = cuestionarios.length-1; i>-1; i--){
+        i++;
+        localStorage.setItem('login', i);
+        i > 1 && confirmCoso()
+        for (let i = cuestionarios.length - 1; i > -1; i--) {
             console.log(i);
             cuestionarios[i].remove();
             p[i].remove();
         }
     })
 }
+const confirmCoso = () => {
+    if (i > 1) {
+        crearElement.innerHTML = `
+        <p>Ya hiciste el cuestionario, no seas cara troll</p>`;
+    }
+}
 const funcionPrin = () => {
     cuestionarios[0].addEventListener('click', (e) => {
         (e.target.value == "respCorrecta1") ? puntuacion1 = 1 : puntuacion1 = 0;
         puntuacionTotal = puntuacion1 + puntuacion2 + puntuacion3 + puntuacion4 + puntuacion5;
-        sessionStorage.setItem('puntuacion',JSON.stringify(puntuacionTotal));
+        sessionStorage.setItem('puntuacion', JSON.stringify(puntuacionTotal));
     })
     cuestionarios[1].addEventListener('click', e => {
         e.target.value == "respCorrecta2" ? puntuacion2 = 1 : puntuacion2 = 0;
         puntuacionTotal = puntuacion1 + puntuacion2 + puntuacion3 + puntuacion4 + puntuacion5;
-        sessionStorage.setItem('puntuacion',JSON.stringify(puntuacionTotal));
+        sessionStorage.setItem('puntuacion', JSON.stringify(puntuacionTotal));
     })
     cuestionarios[2].addEventListener('click', e => {
         e.target.value == "respCorrecta3" ? puntuacion3 = 1 : puntuacion3 = 0;
         puntuacionTotal = puntuacion1 + puntuacion2 + puntuacion3 + puntuacion4 + puntuacion5;
-        sessionStorage.setItem('puntuacion',JSON.stringify(puntuacionTotal));
+        sessionStorage.setItem('puntuacion', JSON.stringify(puntuacionTotal));
     })
     cuestionarios[3].addEventListener('click', e => {
         e.target.value == "respCorrecta4" ? puntuacion4 = 1 : puntuacion4 = 0;
         puntuacionTotal = puntuacion1 + puntuacion2 + puntuacion3 + puntuacion4 + puntuacion5;
-        sessionStorage.setItem('puntuacion',JSON.stringify(puntuacionTotal));
+        sessionStorage.setItem('puntuacion', JSON.stringify(puntuacionTotal));
     })
     cuestionarios[4].addEventListener('click', e => {
         e.target.value == "respCorrecta5" ? puntuacion5 = 1 : puntuacion5 = 0;
         puntuacionTotal = puntuacion1 + puntuacion2 + puntuacion3 + puntuacion4 + puntuacion5;
-        sessionStorage.setItem('puntuacion',JSON.stringify(puntuacionTotal));
+        sessionStorage.setItem('puntuacion', JSON.stringify(puntuacionTotal));
         console.log(puntuacion5);
     })
     console.log(puntuacionTotal);
     funcion();
 }
-if (sessionStorage.getItem('puntuacion')){
+if (sessionStorage.getItem('puntuacion')) {
     puntuacionTotal = sessionStorage.getItem('puntuacion');
     funcion();
     button.remove();
-    for (let i = cuestionarios.length-1; i>-1; i--){
+    for (let i = cuestionarios.length - 1; i > -1; i--) {
         console.log(i);
         cuestionarios[i].remove();
         p[i].remove();
